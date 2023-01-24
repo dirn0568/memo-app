@@ -22,15 +22,3 @@ jobs:
         with:
           java-version: '11'
           distribution: 'temurin'
-
-      # Deploy
-      - name: Deploy
-        env:
-          AWS_ACCESS_KEY_ID: ${{ secrets.HOST }}
-          AWS_SECRET_ACCESS_KEY: ${{ secrets.PRIVATE_KEY }}
-        run:
-          aws deploy create-deployment
-          --application-name ostargram
-          --deployment-group-name ostargram
-          --file-exists-behavior OVERWRITE
-          --region ap-northeast-2
