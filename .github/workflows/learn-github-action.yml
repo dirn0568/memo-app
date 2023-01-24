@@ -25,11 +25,14 @@ jobs:
 
       - name: Grant execute permission for gradlew
         run: chmod +x gradlew
+        shell: bash
+
       - name: Build with Gradle
-        run: ./gradlew clean build
+        run: ./gradlew build
+        shell: bash
 
       - name: Make zip file
-        run: zip -r ./$GITHUB_SHA.zip .
+        run: zip -r ./memo.zip .
         shell: bash
 
       - name: Configure AWS credentials
