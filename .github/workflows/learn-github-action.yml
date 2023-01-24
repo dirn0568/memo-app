@@ -54,5 +54,5 @@ jobs:
           aws deploy create-deployment
           --deployment-group-name memo
           --file-exists-behavior OVERWRITE
-          --s3-location bucket=mysparta1,bundleType=zip,key=memo.zip
+          --s3-location bucket=memo,bundleType=zip,key=memo.zip
           --region ap-northeast-2
