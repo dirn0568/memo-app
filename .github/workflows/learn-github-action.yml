@@ -22,3 +22,4 @@ jobs:
         with:
           java-version: '11'
           distribution: 'temurin'
+      - name: make application.properties
